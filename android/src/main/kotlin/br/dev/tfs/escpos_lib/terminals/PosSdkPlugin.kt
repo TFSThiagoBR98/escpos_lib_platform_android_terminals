@@ -43,7 +43,7 @@ class PosSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
     }
 
     override fun onAttachedToActivity(binding: ActivityPluginBinding) {
-        activity = binding.Activity
+        activity = binding.activity
     
         // Printers
         printerJicai = JicaiPrinter(context, binaryMessenger!!)
