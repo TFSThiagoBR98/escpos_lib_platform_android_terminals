@@ -167,7 +167,7 @@ internal class PositivoL3Printer(private val context: Context, binaryMessenger: 
 
     companion object {
         fun isAvaliable(): Boolean {
-            return Build.MANUFACTURER == "Positivo" && Build.MODEL == "L3"
+            return Build.MANUFACTURER == "Positivo" && (Build.MODEL == "L300" || Build.MODEL == "L400")
         }
 
         private const val TAG: String = "PositivoL3Printer"
