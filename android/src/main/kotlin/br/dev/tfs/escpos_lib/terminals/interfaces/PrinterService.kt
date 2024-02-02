@@ -1,4 +1,4 @@
-package br.dev.tfs.escpos_lib.terminals
+package br.dev.tfs.escpos_lib.terminals.interfaces
 
 import android.graphics.Bitmap
 import io.flutter.plugin.common.MethodChannel
