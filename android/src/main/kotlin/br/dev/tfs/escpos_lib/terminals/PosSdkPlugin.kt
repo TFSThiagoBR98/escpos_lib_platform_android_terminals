@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Context
 import android.webkit.WebView
 import br.dev.tfs.escpos_lib.terminals.printers.JicaiPrinter
+import br.dev.tfs.escpos_lib.terminals.printers.PaxPrinter
 import br.dev.tfs.escpos_lib.terminals.printers.PositivoL3Printer
 import br.dev.tfs.escpos_lib.terminals.printers.SunmiPrinter
 import io.flutter.embedding.engine.plugins.FlutterPlugin
@@ -23,6 +24,7 @@ class PosSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
 
     private var printerJicai: JicaiPrinter? = null;
     private var printerPositivo: PositivoL3Printer? = null;
+    private var printerPax: PaxPrinter? = null;
     private var printerSunmi: SunmiPrinter? = null;
 
     override fun onAttachedToEngine(flutterPluginBinding: FlutterPlugin.FlutterPluginBinding) {
@@ -52,6 +54,8 @@ class PosSdkPlugin : FlutterPlugin, MethodCallHandler, ActivityAware {
         printerPositivo?.start()
         printerSunmi = SunmiPrinter(context, binaryMessenger!!)
         printerSunmi?.start()
+        printerPax = PaxPrinter(context, binaryMessenger!!)
+        printerPax?.start()
     }
 
     override fun onDetachedFromActivityForConfigChanges() {
