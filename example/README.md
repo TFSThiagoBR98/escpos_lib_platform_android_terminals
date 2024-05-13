@@ -1,6 +1,6 @@
-# pos_sdk_example
+# escpos_lib_platform_android_terminals_example
 
-Demonstrates how to use the pos_sdk plugin.
+Demonstrates how to use the escpos_lib_platform_android_terminals plugin.
 
 ## Getting Started
 

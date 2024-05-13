@@ -1,4 +1,4 @@
-# pos_sdk
+# escpos_lib_platform_android_terminals
 
 A new Flutter plugin project.
 
