@@ -46,7 +46,6 @@ internal class PaxPrinter(private val applicationContext: Context, binaryMesseng
             printer!!.printBitmap(it)
         }
         printer!!.start()
-        printer!!.cutPaper(1)
     }
 
     override fun printWrapPaper(n: Int, result: MethodChannel.Result?) {
