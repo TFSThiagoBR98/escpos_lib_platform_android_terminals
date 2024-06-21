@@ -42,7 +42,7 @@ internal class PaxPrinter(private val applicationContext: Context, binaryMesseng
 
     override fun printBitmap(bitmap: Bitmap, result: MethodChannel.Result?) {
         printer!!.init()
-        printer!!.setGray(3);
+        printer!!.setGray(3)
         processBitmapForPrint(bitmap) {
             printer!!.printBitmap(it)
         }
@@ -64,6 +64,7 @@ internal class PaxPrinter(private val applicationContext: Context, binaryMesseng
             startPrinterService(result)
         }
         printer!!.init()
+        printer!!.setGray(3)
         getBitmapFromHtml(htmlContent, applicationContext, {
             Log.i(TAG, "Printing image...")
             printer!!.printBitmap(it)
