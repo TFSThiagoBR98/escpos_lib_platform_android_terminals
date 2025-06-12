@@ -5,7 +5,7 @@ repository: https://github.com/tfsthiagobr98/escpos_lib_platform_android_termina
 issue_tracker: https://github.com/tfsthiagobr98/escpos_lib_platform_android_terminals/issues
 
 environment:
-  sdk: '>=3.3.4 <4.0.0'
+  sdk: '>=2.18.4 <4.0.0'
   flutter: '>=3.3.0'
 
 dependencies:
