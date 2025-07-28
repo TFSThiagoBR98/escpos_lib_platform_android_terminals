@@ -54,7 +54,8 @@ android {
     }
 
     dependencies {
-        implementation 'com.sunmi:printerlibrary:1.0.22'
-        implementation files('libs\\NeptuneLiteApi_V3.24.00_20210519.jar')
+        implementation(name:'PayLib-release-1.4.123', ext:'aar')
+        implementation(name:'printerlibrary-1.0.23', ext:'aar')
+        implementation files('libs\\NeptuneLiteApi_V4.10.00_20241122.jar')
     }
 }
