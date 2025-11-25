@@ -2,14 +2,14 @@ group 'br.dev.tfs.escpos_lib.terminals'
 version '1.0-SNAPSHOT'
 
 buildscript {
-    ext.kotlin_version = "2.1.0"
+    ext.kotlin_version = "2.2.21"
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath("com.android.tools.build:gradle:8.7.3")
+        classpath("com.android.tools.build:gradle:8.13.1")
         classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version")
     }
 }
@@ -29,19 +29,19 @@ android {
         namespace 'br.dev.tfs.escpos_lib.terminals'
     }
 
-    compileSdk = 35
+    compileSdk = 36
 
     buildFeatures {
         aidl = true
     }
 
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_11
+        jvmTarget = JavaVersion.VERSION_17
     }
 
     sourceSets {
@@ -50,12 +50,12 @@ android {
     }
 
     defaultConfig {
-        minSdkVersion = 22
+        minSdkVersion = 23
     }
 
     dependencies {
-        implementation(name:'PayLib-release-1.4.123', ext:'aar')
-        implementation(name:'printerlibrary-1.0.23', ext:'aar')
-        implementation files('libs\\NeptuneLiteApi_V4.10.00_20241122.jar')
+        implementation('com.sunmi:paylib:1.4.123')
+        implementation('com.sunmi:library:1.0.23')
+        implementation('com.pax:neptunelite-api:4.10.00')
     }
 }
